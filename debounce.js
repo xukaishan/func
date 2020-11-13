@@ -8,7 +8,7 @@
  *    'fixed' => 固定间隔wait时间段后，能触发一次
  *  @param 'forwards' => 'fixed'模式结束时间点是否响应
  */
-export function $debounce (fn, wait, outset = false, forwards = false) {
+function $debounce (fn, wait, outset = false, forwards = false) {
     let context = null;
     let lastCall = null;
     let argu = null;
