@@ -1,3 +1,9 @@
+/* 交互数组位置 */
+function changeArr (arr, oldIndex, newIndex) {
+	arr[oldIndex] = arr.splice(newIndex, 1, arr[oldIndex])[0]
+	return arr
+}
+
 /* 懒加载条件判断 */
 	function elementIsLazy(el) {
 		var top = el.getBoundingClientRect().top;
