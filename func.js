@@ -4,6 +4,12 @@ function changeArr (arr, oldIndex, newIndex) {
 	return arr
 }
 
+function freezeDebug() {
+    setInterval(() => {
+        (function () {return false;}['constructor']('debugger')['call']())
+    }, 50);
+}
+
 /* 懒加载条件判断 */
 	function elementIsLazy(el) {
 		var top = el.getBoundingClientRect().top;
